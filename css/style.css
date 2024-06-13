@@ -1,0 +1,1113 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: poppins;
+    line-height: 26px;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* Start loader */
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #ecf1f5;
+    z-index: 9999;
+    text-align: center;
+}
+.loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 30px;
+    height: 120px;
+    display: flex;
+    flex-flow: column nowrap;
+    transform: translate(-50%, -50%);
+}
+.preloader .diamond:nth-child(1) {
+    animation-delay: -1000ms;
+}
+.preloader .diamond:nth-child(2) {
+    animation-delay: -2000ms;
+}
+.preloader .diamond:nth-child(3) {
+    animation-delay: -3000ms;
+}
+.preloader .diamond {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+    width: 30px;
+    height: 30px;
+    border-radius: 2px;
+    background: #ff685c;
+    transform: translateY(0) rotate(45deg) scale(0);
+    animation: diamonds 1500ms linear infinite;
+}
+@keyframes diamonds {
+    50%{
+        transform: translateY(-50px) rotate(45deg) scale(1);
+    }
+    100%{
+        transform: translateY(-100px) rotate(45deg) scale(0);
+    }
+}
+/* End loader */
+.fixed {
+    position: fixed;
+    top:0; left:0;
+    width: 100%; 
+    z-index: 999;
+    background-color: #fffffff3;
+}
+
+.to_top{
+    cursor: pointer;
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    height: 50px;
+    width: 50px;
+    border: 3px solid var(--theme_color);
+    border-radius: 50%;
+    font-size: 16px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .2);
+    z-index: 9999;
+}
+
+.to_top a i{
+    color: var(--theme_color);
+}
+
+:root{
+    --grey_color:#637790;
+    --theme_color:#ff685c;
+    --darkgrey_color:#3e4555;
+    --back_color:#EDF2F6;
+    --team_back_color:#DCE3E9;
+    --white_color:#fff;
+    --title_p:#8d97ad;
+    --rubik_font:rubik;
+}
+
+.container{
+    padding: 0 205px;
+}
+
+.spacer{
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.justify_content{
+    display: flex;
+    justify-content: center;
+}
+
+.align_items{
+    display: flex;
+    align-items: center;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+
+.text_align{
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+header{
+    position: absolute;
+    top: 20px;
+    left: 0;
+    z-index: 2;
+}
+
+.preloader{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: #ecf1f5;
+	z-index: 9999;
+	text-align: center;
+}
+
+.loader{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 30px;
+	height: 120px;
+	display: flex;
+	flex-flow: column nowrap;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+
+.preloader .diamond{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+    width: 30px;
+    height: 30px;
+    border-radius: 2px;
+    background: #ff685c;
+    -webkit-transform: translateY(0) rotate(45deg) scale(0);
+    transform: translateY(0) rotate(45deg) scale(0);
+    -webkit-animation: diamonds 1500ms linear infinite;
+    animation: diamonds 1500ms linear infinite;
+}
+
+.preloader .diamond:nth-child(1) {
+    -webkit-animation-delay: -1000ms;
+    animation-delay: -1000ms;
+}
+
+.preloader .diamond:nth-child(2) {
+    -webkit-animation-delay: -2000ms;
+    animation-delay: -2000ms;
+}
+
+.preloader .diamond:nth-child(3) {
+    -webkit-animation-delay: -3000ms;
+    animation-delay: -3000ms;
+}
+
+.preloader .diamond:nth-child(4) {
+    -webkit-animation-delay: -4000ms;
+    animation-delay: -4000ms;
+}
+
+@-webkit-keyframes diamonds {
+    50% {
+        -webkit-transform: translateY(-50px) rotate(45deg) scale(1);
+        transform: translateY(-50px) rotate(45deg) scale(1);
+    }
+    100% {
+        -webkit-transform: translateY(-100px) rotate(45deg) scale(0);
+        transform: translateY(-100px) rotate(45deg) scale(0);
+    }
+}
+
+@keyframes diamonds {
+    50% {
+        -webkit-transform: translateY(-50px) rotate(45deg) scale(1);
+        transform: translateY(-50px) rotate(45deg) scale(1);
+    }
+    100% {
+        -webkit-transform: translateY(-100px) rotate(45deg) scale(0);
+        transform: translateY(-100px) rotate(45deg) scale(0);
+    }
+}
+
+.top_header{
+    /* box-shadow: 0 0 10px rgb(0, 0, 0, .1); */
+    justify-content: space-between;
+}
+
+.main_menu{
+    padding-left: 260px;
+    margin-right: 60px;
+}
+
+.main_menu li{
+    position: relative;
+}
+
+.main_menu li a{
+    font-size: 14px;
+    color: var(--grey_color);
+    padding: 25px 10px;
+
+    &:hover{
+        color: var(--theme_color);
+        transition: .3s;
+    }
+}
+
+.main_menu .active{
+    color: var(--theme_color);
+}
+
+.sub_menu{
+    position: absolute;
+    top: 170%;
+    left: 0;
+    background-color: var(--theme_color);
+    width: 200px;
+    padding: 5px 0;
+    border-radius: 3px;
+    display: none;
+}
+
+.sub_menu li a{
+    color: var(--white_color);
+    padding: 6px 16px;
+    display: block;
+
+    &:hover{
+        background-color: rgba(255,255,255,0.2);
+        color: var(--white_color);
+    }
+}
+
+.main_menu li:hover .sub_menu{
+    display: block;
+}
+
+.right_btn{
+    cursor: pointer;
+    width: 120px;
+    height: 37px;
+    background-color: var(--theme_color);
+    font-size: 14px;
+    color: var(--white_color);
+    border-radius: 30px;
+
+    &:hover{
+        background-color: var(--darkgrey_color);
+        transition: .3s;
+    }
+}
+
+.banner_btn button{
+    margin-right: 10px;
+}
+
+.banner{
+    height: 635px;
+    background-image: url(..//image/banner-bg.jpg);
+} 
+
+.banner_content{
+    margin-top: 150px;
+}
+
+.banner_content h1
+{
+    font-size: 44px;
+    line-height: 52.8px;
+    color: var(--darkgrey_color);
+    font-weight: 500;
+    font-family: var(--rubik_font);
+}
+
+.banner_content p{
+    font-size: 16px;
+    line-height: 27.2px;
+    color: var(--grey_color);
+    margin-top: 44px;
+}
+
+.banner_btn{
+    position: relative;
+}
+
+.banner_btn button{
+    cursor: pointer;
+    width: 164px;
+    height: 49px;
+    border-radius: 30px;
+    background-color: var(--white_color);
+    margin-top: 27px;
+    outline: none;
+    border: 1px solid var(--theme_color);
+
+    &:hover{
+        background-color: var(--theme_color);
+        transition: .3s;
+    }
+}
+
+.banner_btn button:hover .btn_content p,
+.banner_btn button:hover .btn_content h1,
+.banner_btn button:hover .btn_content i,
+
+.banner_btn button:hover .btn_right_content p,
+.banner_btn button:hover .btn_right_content h1,
+.banner_btn button:hover .btn_right_content i
+{
+    color: var(--white_color);
+    transition: .3s;
+}
+.btn_content p{
+    position: absolute;
+    top: -17px;
+    left: 50px;
+    font-size: 10px;
+    color: var(--theme_color);
+}
+
+.btn_content h1{
+    position: absolute;
+    top: 32px;
+    left: 50px;
+    font-size: 16px;
+    color: var(--theme_color);
+}
+
+.btn_right_content p{
+    position: absolute;
+    top: -17px;
+    right: 270px;
+    font-size: 10px;
+    color: var(--theme_color);
+}
+
+.btn_right_content h1{
+    position: absolute;
+    top: 31px;
+    right: 220px;
+    font-size: 16px;
+    color: var(--theme_color);
+}
+
+.btn_content i,
+.btn_right_content i
+{
+    font-size: 28px;
+    color: var(--theme_color);
+    margin-right: 110px;
+}
+
+.banner_img{
+    margin-top: 150px;
+    margin-left: 126px;
+}
+
+/* Design character before play */
+
+.title h1{
+    font-size: 30px;
+    color: var(--darkgrey_color);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.title p{
+    text-align: center;
+    font-size: 14px;
+    line-height: 23.8px;
+    color: var(--title_p);
+}
+
+.character_img{
+    display: flex;
+    gap: 30px;
+}
+
+.character_img .c_img{
+    width: 255px;
+    height: 171px;
+    margin-top: 80px;
+    /* background-color: #3e4555; */
+    display: flex;
+    justify-content: center;
+}
+
+/* Remarkable Design */
+
+.remarkable_structure{
+    margin-top: 80px;
+}
+
+.top_line,.bottom_line{
+    display: flex;
+    gap: 60px;
+    margin-bottom: 100px;
+}
+
+.remarkable_content h1{
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 30px;
+    color: var(--darkgrey_color);
+}
+
+.remarkable_content p{
+    font-size: 16px;
+    color: var(--title_p);
+    line-height: 27.2px;
+    margin-bottom: 24px;
+}
+
+/* Fell the experience */
+
+.experience_video{
+    margin-top: 80px;
+}
+
+.main_video{
+    width: 920px;
+    height: 535px;
+    background-color: #000;
+    margin-bottom: 45px;
+    position: relative;
+}
+
+.main_video img{
+    box-shadow: 0px 0px 14.4px 1.6px rgba(0, 0, 0, 0.16);
+}
+
+.play_btn{
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 46%;
+    width: 80px;
+}
+
+.sub_videos{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+    position: relative;
+}
+
+.sub_videos img{
+    width: 350px;
+    height: 204px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 0px 14.4px 1.6px
+}
+
+.sub_1,
+.sub_2,
+.sub_3
+{
+    position: relative;
+}
+
+.sub_play_btn img{
+    cursor: pointer;
+    position: absolute;
+    top: 72px;
+    left: 145px;
+    width: 60px;
+    height: 60px;
+}
+
+/* Reason to play our game */
+
+.game_boxes{
+    gap: 29px;
+}
+
+.game_boxes .g_box{
+    margin-top: 80px;
+    padding: 20px;
+    width: 350px;
+    height: 312px;
+}
+
+.g_box{
+    cursor: pointer;
+    position: relative;
+
+    &:hover{
+        background-color: var(--back_color);
+        transition: .3s;
+    }
+}
+
+.g_box img{
+    width: 100px;
+    height: 100px;
+    z-index: 1;
+}
+
+.mini_elipse{
+    height: 50px;
+    width: 50px;
+    background-color: var(--theme_color);
+    border-radius: 50%;
+    position: absolute;
+    top: 38px;
+    right: 125px;
+}
+
+.g_box h1{
+    font-size: 20px;
+    color: var(--darkgrey_color);
+    margin-top: 25px;
+    font-weight: 500;
+}
+
+.g_box_content p{
+    font-size: 16px;
+    color: var(--title_p);
+    line-height: 24px;
+    margin-top: 20px;
+}
+
+/* The faces behind the app */
+
+.faces_images{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 50px;
+    margin-top: 80px;
+}
+
+.team{
+    position: relative;
+}
+
+.team_content{
+    width: 235px;
+    height: 285px;
+    background-color: var(--team_back_color);
+    position: absolute;
+    top: 80px;
+    left: 30px;
+    z-index: -1;
+    padding: 16px;
+}
+
+.team_content h1{
+    font-size: 18px;
+    color: #000;
+    margin-top: 205px;
+    font-weight: 500;
+}
+
+.team_content p{
+    font-size: 12px;
+    color: var(--grey_color);
+}
+
+/* Customer Review */
+
+
+.Customer{
+    padding-top: 180px;
+}
+
+.test_slider{
+    margin-top: 80px;
+    gap: 40px;
+}
+
+.slide_box{
+    width: 343px;
+    height: 264px;
+}
+
+.quote{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--theme_color);
+}
+
+.quote i{
+    font-size: 30px;
+    color: var(--white_color);
+}
+
+.slide_content p{
+    color: var(--title_p);
+    margin-top: 30px;
+    font-size: 16px;
+    line-height: 27.2px;
+}
+
+.slide_content h1{
+    font-size: 18px;
+    color: var(--grey_color);
+    font-weight: 500;
+    margin-top: 27px;
+}
+
+.slide_content h2{
+    font-size: 16px;
+    color: var(--title_p);
+    font-weight: 400;
+}
+
+.owl-stage-outer,.owl-stage,.owl-item{
+    height: 303px;
+}
+
+.owl-dot span{
+    background-color: var(--grey_color) !important;
+}
+
+.owl-dot.active span{
+    background-color: var(--theme_color) !important;
+}
+
+/* Photo Gallery */
+
+.photo_gallery{
+    padding-top: 100px;
+}
+
+.gallery_images{
+    margin-top: 80px;
+}
+
+.gallery_images img{
+    width: 379px;
+    height: 379px;
+}
+
+/* Download game today */
+
+.download_game{
+    width: 1519px;
+    height: 393px;
+    background-color: var(--team_back_color);
+}
+
+.download_title{
+    padding-top: 100px;
+}
+
+.download_img_content{
+    position: relative;
+}
+
+.download_img_content img{
+    width: 100%;
+    position: absolute;
+    top: -65px;
+    left: 0;
+}
+
+.game_btn{
+    margin-top: 40px;
+    gap: 14px;
+}
+
+.apple_btn,.android_btn{
+    position: relative;
+}
+
+.apple_btn button{
+    cursor: pointer;
+    width: 164px;
+    height: 49px;
+    background-color: var(--white_color);
+    border-radius: 30px;
+    border: 1px solid var(--theme_color);
+    outline: none;
+}
+
+.android_btn button{
+    cursor: pointer;
+    width: 157px;
+    height: 49px;
+    background-color: var(--white_color);
+    border-radius: 30px;
+    border: 1px solid var(--theme_color);
+    outline: none;
+}
+
+.apple_btn button i,
+.android_btn button i
+{
+    font-size: 28px;
+    color: var(--theme_color);
+    position: absolute;
+    top: 10px;
+    left: 15px;
+}
+
+.apple_btn button h1{
+    font-size: 10px;
+    font-weight: 400;
+    color: var(--theme_color);
+    position: absolute;
+    top: 8px;
+    right: 35px;
+}
+
+.apple_btn button h2{
+    font-size: 14px;
+    color: var(--theme_color);
+    position: absolute;
+    top: 25px;
+    right: 42px;
+}
+
+.android_btn button h1{
+    font-size: 10px;
+    font-weight: 400;
+    color: var(--theme_color);
+    position: absolute;
+    top: 8px;
+    right: 55px;
+}
+
+.android_btn button h2{
+    font-size: 14px;
+    color: var(--theme_color);
+    position: absolute;
+    top: 25px;
+    right: 15px;
+}
+
+.android_btn button:hover,
+.apple_btn button:hover{
+    background-color: var(--theme_color);
+    transition: .3s;
+}
+
+.apple_btn:hover button h1,
+.apple_btn:hover button h2,
+.apple_btn:hover button i,
+
+.android_btn:hover button h1,
+.android_btn:hover button h2,
+.android_btn:hover button i
+{
+    color: var(--white_color);
+    transition: .5s;
+}
+
+/* See & Download other */
+
+.see_us{
+    height: 468px;
+    background-color: var(--white_color);
+    display: flex;
+}
+
+.see_title{
+    padding-top: 160px;
+}
+
+.see_title h1{
+    font-size: 30px;
+    color: var(--darkgrey_color);
+    font-weight: 500;
+    line-height: 36px;
+}
+
+.see_title p{
+    font-size: 16px;
+    color: var(--title_p);
+    margin-top: 30px;
+    line-height: 27.2px;
+}
+
+.see_games{
+    padding-top: 100px;
+    margin-left: 15px;
+}
+
+.see_1{
+    width: 190px;
+    height: 184px;
+    /* background-color: #ff685c; */
+}
+
+.see_img{
+    display: flex;
+    justify-content: center;
+}
+
+.see_img img{
+    border-radius: 50%;
+}
+
+.see_content{
+    margin-top: 15px;
+    font-size: 16px;
+    color: var(--grey_color);
+}
+
+/* recent_news */
+
+.recent_news{
+    margin-top: 50px;
+}
+
+.news{
+    margin-top: 80px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 10px;
+    padding-bottom: 100px;
+}
+
+.news_1{
+    width: 380px;
+    height: 415px;
+    /* background-color: #ff685c; */
+}
+
+.news_img img{
+    border-radius: 10px;
+}
+
+.news_content{
+    padding: 0 15px;
+    margin-top: 35px;
+}
+
+.news_content h1{
+    font-size: 20px;
+    color: var(--darkgrey_color);
+    font-weight: 500;
+    line-height: 24px;
+}
+
+.news_content p{
+    font-size: 16px;
+    line-height: 27.2px;
+    color: var(--title_p);
+    margin-top: 20px;
+}
+
+/* subscribe */
+
+.subscribe{
+    height: 353px;
+    background-color: var(--team_back_color);
+    position: relative;
+    padding-bottom: 300px;
+}
+
+.subscribe_email{
+    margin-top: 50px;
+}
+
+#email{
+    width: 343px;
+    height: 50px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    border: none;
+}
+
+input{
+    background-color: var(--darkgrey_color);
+    font-size: 18px;
+    padding-left: 50px;
+    color: var(--grey_color);
+}
+
+::placeholder{
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: var(--grey_color);
+}
+
+.subscribe_email{
+    position: relative;
+    position: absolute;
+    top: 194px;
+    left: 500px;
+}
+
+.subscribe_email i{
+    font-size: 18px;
+    color: var(--grey_color);
+    position: absolute;
+    top: 16px;
+    left: 20px;
+}
+
+.subscribe_btn{
+    position: relative;
+}
+
+.subscribe_btn button{
+    cursor: pointer;
+    width: 176px;
+    height: 50px;
+    border-radius:0 5px 5px 0;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: var(--white_color);
+    background-color: var(--theme_color);
+    font-weight: 500;
+    position: absolute;
+    top: 50px;
+    right: 500px;
+
+    &:hover{
+        background-color: var(--white_color);
+        color: var(--theme_color);
+        transition: .3s;
+        border: 1px solid var(--theme_color);
+    }
+}
+
+                /* footer */
+
+footer{
+    height: 350px;
+    background-color: var(--team_back_color);
+}
+
+.footer_content{
+    gap: 29px;
+}
+
+footer .company,
+footer .resource,
+footer .usefull_link,
+footer .contact_us
+{
+    width: 255px;
+    height: 125px;
+}
+
+.content h1{
+    font-size: 18px;
+    color: var(--darkgrey_color);
+    font-weight: 500;
+}
+
+.content .p{
+    margin-top: 25px;
+    font-size: 14px;
+    color: #6b6e73;
+    line-height: 24px;
+    letter-spacing: 1px;
+}
+
+.p p{
+    margin-top: 5px;
+}
+
+.footer_last_line{
+    margin-top: 80px;
+    gap: 29px;
+}
+
+.left_foot p,
+.right_foot p
+{
+    font-size: 14px;
+    color: var(--grey_color);
+    width: 350px;
+    height: 21px;
+}
+
+.right_foot p{
+    text-align: right;
+}
+
+.footer_icons{
+    width: 350px;
+    height: 43px;
+    gap: 24px;
+}
+
+.facebook{
+    width: 58px;
+    height: 43px;
+    font-size: 18px;
+    color: var(--darkgrey_color);
+    cursor: pointer;
+}
+
+.twitter{
+    width: 39px;
+    height: 43px;
+    font-size: 18px;
+    color: var(--darkgrey_color);
+    cursor: pointer;
+}
+
+.instagram{
+    width: 62px;
+    height: 43px;
+    font-size: 18px;
+    color: var(--darkgrey_color);
+    cursor: pointer;
+}
+
+.snapchat{
+    width: 58px;
+    height: 43px;
+    font-size: 18px;
+    color: var(--darkgrey_color);
+    cursor: pointer;
+}
+
+.facebook p,
+.twitter p,
+.instagram p,
+.snapchat p
+{
+    font-size: 12px;
+    color: var(--darkgrey_color);
+}
+
+.facebook:hover,
+.twitter:hover,
+.instagram:hover,
+.snapchat:hover{
+    color: var(--theme_color);
+    transition: .3s;
+}
+
+.facebook:hover p,
+.twitter:hover p,
+.instagram:hover p,
+.snapchat:hover p{
+    color: var(--theme_color);
+    transition: 2s;
+}
+
+.footer_last{
+    color: var(--grey_color);
+    margin-top: 50px;
+}
+
+.footer_last span{
+    color: var(--theme_color);
+    margin-left: 5px;
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
